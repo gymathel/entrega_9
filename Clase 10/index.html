@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Entrega 10 - F1</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js@1.12.0/src/toastify.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/toastify-js@1.12.0/src/toastify.js"></script>
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Simulador F1 - Coderhouse</h1>
+        <p class="subtitle">Pre-Entrega 10: APIs y Librerías</p>
+
+        <div id="loader" class="loader" style="display: none;">Cargando datos desde la API de OpenF1...</div>
+
+        <div class="button-group" style="margin-top: 15px;">
+            <button id="load-api-btn" class="f1-button">Cargar API</button>
+            <button id="check-status-btn" class="f1-button secondary">Verificar si la API cargó</button>
+        </div>
+
+        <section class="filters-section" style="margin-top: 20px;">
+            <h3>Consultar Resultados</h3>
+            <div class="filter-controls">
+                <div class="filter-group">
+                    <label for="year-select">Seleccionar Año:</label>
+                    <select id="year-select">
+                        <option value="">-- Elija un año --</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="race-select">Seleccionar Carrera:</label>
+                    <select id="race-select">
+                        <option value="">-- Elija una carrera --</option>
+                        <option value="bahrain">GP de Baréin</option>
+                        <option value="monaco">GP de Mónaco</option>
+                        <option value="monza">GP de Monza</option>
+                    </select>
+                </div>
+            </div>
+            <button id="apply-filters-btn" class="f1-button" style="margin-top: 10px;">Ver Ganador y Clima</button>
+            
+            <div id="filter-results" class="result-card" style="display: none; margin-top: 15px;"></div>
+        </section>
+
+        <section id="telemetry-container" class="grid-container" style="margin-top: 20px;"></section>
+    </div>
+
+</body>
+</html>
